@@ -1,0 +1,277 @@
+/* Home.css */
+
+/* Ensure profile icon styling remains intact */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #211f1f;
+  transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+  border-color: #f39c12;
+}
+
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* General body and html styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Animation for background slide effect */
+@keyframes slide-vertical {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+/* Style for h1 and p elements */
+h1, p {
+  color: #f3eaeadd;
+  position: relative;
+  z-index: 3;
+  margin: 0; /* Remove default margins */
+}
+
+/* Main container styling */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main container with background image and animation */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-image: url("./entry.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  animation: slide-vertical 10s linear infinite;
+  position: relative;
+}
+
+/* Dark overlay effect */
+.main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 42, 42, 0.6);
+  z-index: 1;
+}
+
+/* Blur circle styling */
+.blur-circle1, .blur-circle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(245, 235, 235, 0.5);
+  z-index: 2;
+}
+
+.blur-circle1 {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.blur-circle2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to bottom, #cf1a1a, #4113ae);
+  border-bottom: none;
+  box-shadow: 0 4px 8px rgb(255, 255, 4);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 3;
+}
+
+.navbar .logo-image {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.navbar .logo-text {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.navbar .navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-item {
+  margin-left: 25px;
+}
+
+.navbar .navbar-item a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-item a:hover {
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+}
+
+/* Landing page styling */
+.landing-page {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  min-height: calc(100vh - 80px); /* Ensure it covers the full viewport minus the navbar height */
+}
+
+/* Landing page content styling */
+.landing-page .content {
+  text-align: center;
+  padding: 0; /* Adjusted padding */
+  margin: 0; /* Remove any extra margin */
+}
+
+.landing-page .container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+  margin-bottom: 0; /* Remove margin */
+}
+
+/* Info section styling */
+.landing-page .info {
+  max-width: 500px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.landing-page .info h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.landing-page .info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Button styling with animations */
+.landing-page .info button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: #fcfcfc;
+  color: #131212;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.landing-page .info button:hover {
+  background-color: #eae9e9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.landing-page .info button:active {
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.landing-page .info button:focus {
+  outline: none;
+}
+
+.landing-page .info button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Additional animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
