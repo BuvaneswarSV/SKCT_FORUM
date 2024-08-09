@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import static org.springframework.http.HttpStatus.OK;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +27,14 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
+    @CrossOrigin(origins = "http://localhost:5173")
     @Operation(summary = "Register a new user", description = "Allows users to register by providing necessary registration details.")
     public ResponseEntity<?> register(@Parameter(description = "Registration details of the user") @RequestBody RegisterRequest registerRequest) {
         return new ResponseEntity<>(authService.register(registerRequest), OK);
     }
 
     @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:5173")
     @Operation(summary = "Authenticate user", description = "Allows users to authenticate by providing valid login credentials.")
     public ResponseEntity<?> login(@Parameter(description = "Login credentials of the user") @RequestBody LoginRequest loginRequest) {
         return new ResponseEntity<>(authService.login(loginRequest), OK);
