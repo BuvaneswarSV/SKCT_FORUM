@@ -14,6 +14,7 @@ import Sidebar from './pages/Sidebar';
 import UserDashboard from './pages/UserDashboard';
 import UserPosts from './pages/UserPosts';
 import UserProfile from './pages/UserProfile';
+import ForumPage from './pages/ForumPage';
 
 const App = () => {
   const appStyle = {
@@ -65,6 +66,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    // <ForumPage/>
   );
 };
 

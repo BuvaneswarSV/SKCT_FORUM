@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Forum, Person } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
+import { Home, Forum, Person, ExitToApp } from '@mui/icons-material';
 
 const Sidebar = () => {
+
+  const navigate = useNavigate();
+  
   const sidebarStyle = {
     width: '200px',
     backgroundColor: '#f4f4f4',
@@ -26,6 +30,14 @@ const Sidebar = () => {
     marginRight: '0.5rem',
   };
 
+  const handleLogout = () => {
+    // Clear authentication data (like tokens) here
+    // Example: localStorage.removeItem('authToken');
+
+    // Redirect to login page
+    navigate('/');
+  };
+
   return (
     <div style={sidebarStyle}>
       <ul style={ulStyle}>
@@ -41,12 +53,18 @@ const Sidebar = () => {
             Posts
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link to="/profile" style={linkStyle}>
             <Person style={iconStyle} />
             Profile
           </Link>
-        </li> */}
+        </li>
+        <li>
+          <div onClick={handleLogout} style={{ ...linkStyle, cursor: 'pointer' }}>
+            <ExitToApp style={iconStyle} />
+            Logout
+          </div>
+        </li>
       </ul>
     </div>
   );
