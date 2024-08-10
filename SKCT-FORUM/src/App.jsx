@@ -15,6 +15,7 @@ import UserDashboard from './pages/UserDashboard';
 import UserPosts from './pages/UserPosts';
 import UserProfile from './pages/UserProfile';
 import ForumPage from './pages/ForumPage';
+import ThreadPage from './pages/ThreadPage';
 
 const App = () => {
   const appStyle = {
@@ -58,6 +59,7 @@ const App = () => {
                     <Route path="/dashboard" element={<UserDashboard />} />
                     <Route path="/posts" element={<UserPosts />} />
                     <Route path="/profile" element={<UserProfile />} />
+                    <Route path="/threads" element={<ThreadPage/>} />
                   </Routes>
                 </div>
               </div>

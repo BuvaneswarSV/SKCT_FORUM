@@ -46,16 +46,16 @@ const LoginPage = () => {
         "http://localhost:8080/api/auth/login",
         formData
       );
-      const { accessToken, role } = response.data;
-      localStorage.setItem("token", accessToken);
-      localStorage.setItem("role", role);
-      console.log("token:",localStorage.getItem("token"));
-      alert("Login Success!");
-      if (role === "ADMIN") {
-        navigate("/admin");
-      } else {
+      // const { accessToken, role } = response.data;
+      // localStorage.setItem("token", accessToken);
+      // localStorage.setItem("role", role);
+      // console.log("token:",localStorage.getItem("token"));
+      // alert("Login Success!");
+      // if (role === "ADMIN") {
+      //   navigate("/admin");
+      // } else {
         navigate("/dashboard");
-      }
+      // }
     } catch (error) {
       console.error(error);
       setError("Invalid email or password");

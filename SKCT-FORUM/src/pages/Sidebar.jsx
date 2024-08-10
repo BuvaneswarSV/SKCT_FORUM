@@ -60,6 +60,12 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/threads" style={linkStyle}>
+            <Forum style={iconStyle} />
+            Threads
+          </Link>
+        </li>
+        <li>
           <div onClick={handleLogout} style={{ ...linkStyle, cursor: 'pointer' }}>
             <ExitToApp style={iconStyle} />
             Logout
