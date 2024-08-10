@@ -10,4 +10,6 @@ public interface AuthService {
     LoginResponse login(LoginRequest loginRequest);
 
     String createAdmin();
+
+    
 }

@@ -41,6 +41,7 @@ public class SecurityConfig {
         private final LogoutHandler logoutHandler;
 
         private static final String[] PublicEndPoints = {
+                "/api/threads/**",
                         "/api/auth/**",
                         "/swagger-ui/**",
                         "/swagger-ui.html/**",

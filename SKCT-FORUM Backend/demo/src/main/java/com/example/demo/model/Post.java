@@ -1,11 +1,11 @@
 package com.example.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+// import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
+// import jakarta.persistence.ManyToOne;
+// import jakarta.persistence.JoinColumn;
 
 @Entity
 public class Post {
@@ -15,10 +15,10 @@ public class Post {
     private String answer;
     private String date;
 
-    @ManyToOne
-    @JoinColumn(name = "threadid")
-    @JsonBackReference
-    private Thread thread;
+    // @ManyToOne
+    // @JoinColumn(name = "threadid")
+    // @JsonBackReference
+    // private Thread thread;
 
     public Long getPostid() {
         return postid;
@@ -52,11 +52,11 @@ public class Post {
         this.date = date;
     }
 
-    public Thread getThread() {
-        return thread;
-    }
+    // public Thread getThread() {
+    //     return thread;
+    // }
 
-    public void setThread(Thread thread) {
-        this.thread = thread;
-    }
+    // public void setThread(Thread thread) {
+    //     this.thread = thread;
+    // }
 }
