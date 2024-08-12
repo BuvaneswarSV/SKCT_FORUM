@@ -1,0 +1,95 @@
+/* Admin Login Page Specific Styles */
+#admin-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 100px; /* Adjusted to match the login page */
+  background-color: #121212; /* Dark grey background */
+}
+
+#admin-box form {
+  background-color: #1c1c1c; /* Dark background for the container */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+  max-width: 400px;
+  width: 100%;
+}
+
+#adminTitle {
+  font-size: 26px; /* Match the login page title size */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e90ff; /* Blue color */
+}
+
+#error {
+  color: #ff6347; /* Red color for error messages */
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.user-box {
+  position: relative;
+  margin-bottom: 30px; /* Match spacing between input fields */
+}
+
+.user-box input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #333; /* Dark border */
+  border-radius: 5px;
+  background: #2c2c2c; /* Dark input background */
+  color: #fff; /* White text */
+  transition: border-color 0.3s;
+}
+
+.user-box input:focus {
+  border-color: #1e90ff; /* Blue border on focus */
+  outline: none;
+}
+
+.user-box label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 5px;
+  background: #1c1c1c; /* Dark background */
+  font-size: 16px;
+  color: #fff; /* White text */
+  transition: 0.3s;
+}
+
+.user-box input:focus + label,
+.user-box input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 10px;
+  color: #1e90ff; /* Blue label */
+  font-size: 12px;
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  background: #1e90ff; /* Blue background */
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff; /* White text */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1c86ee; /* Darker blue on hover */
+}
+
+/* Error message styles */
+.error {
+  color: #ff6347; /* Red color for error messages */
+  font-size: 14px;
+}

@@ -1,0 +1,63 @@
+.inspirational-quotes {
+    background-color: #2e2e2e; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #007bff; /* Blue accent */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .quote-form {
+    background-color: #1c1c1c; /* Slightly darker gray for the form background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .quote-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    background-color: #2e2e2e; /* Matching the form background */
+    color: #ffffff; /* White text inside textarea */
+    min-height: 100px; /* Ensure there's enough space for the quote */
+  }
+  
+  .quote-form button {
+    background-color: #007bff; /* Blue background for button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .quote-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .quotes-list {
+    margin-top: 20px;
+  }
+  
+  .quote-item {
+    background-color: #1c1c1c; /* Slightly darker gray for quote items */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .quote-item p {
+    margin: 0;
+  }
+  

@@ -1,0 +1,32 @@
+/* UserProfile.css */
+.user-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .user-profile h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f7ecec;
+  }
+  
+  .user-profile p {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  /* UserProfile.css */
+
+/* UserProfile.css */
+.avatar {
+  width: 150px; /* Set the width of the avatar */
+  height: 150px; /* Set the height of the avatar */
+  background-color: #e0e0e0; /* Light gray background if no image is available */
+  background-size: cover; /* Scale the background image to cover the element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  border-radius: 50%; /* Make the image circular */
+  display: inline-block; /* Ensure the div respects the width and height */
+}
+

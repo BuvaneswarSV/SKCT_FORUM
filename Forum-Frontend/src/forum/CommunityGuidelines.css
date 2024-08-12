@@ -1,0 +1,32 @@
+.community-guidelines {
+    background-color: #2e2e2e; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #007bff; /* Blue accent */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .guideline-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .guideline-item {
+    background-color: #1c1c1c; /* Slightly darker gray for items */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .guideline-item:not(:last-child) {
+    margin-bottom: 15px; /* Space between items */
+  }
+  
